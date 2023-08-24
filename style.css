@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+nav {
+    font-family: sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    height: 4.5rem;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0 1rem;
+}
+
+.brand img {
+    width: 3.5rem;
+    padding: 0 0.7rem;
+    border-radius: 0.6rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+
+/* main=========================================== */
+.container {
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    margin: 1rem auto;
+    width: 80%;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.songItemContainer {
+    margin-top: 3rem;
+}
+
+.songItem {
+    margin-top: 0.7rem;
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 0.2rem 2rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.songItem img {
+    width: 2rem;
+    border-radius: 3rem;
+    margin-right: 0.4rem;
+}
+
+.songItem .songListPlay span {
+    margin-left: 0.7rem;
+}
+
+.songItem .songListPlay i {
+    margin-left: 0.3rem;
+    cursor: pointer;
+}
+
+
+/* button================================================= */
+
+.bottom {
+    position: sticky;
+    background-color: black;
+    color: white;
+    height: 6rem;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#myProgressBar {
+    width: 80vw;
+    margin: 0.7rem auto;
+    cursor: pointer;
+}
+
+.icon i {
+    margin: 0 0.9rem;
+    cursor: pointer;
+}
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    margin-top: 1rem;
+}
+
+.songInfo img {
+    margin-right: 1rem;
+    width: 4rem;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+
+@media(max-width:500px){
+    /* nav{
+        min-width: 100%;
+    } */
+    .container{
+        min-height: 73vh;
+        width: 90%;
+       justify-content: center;
+    }
+    .bottom{
+        height: 8rem;
+        display: flex;
+        padding: 0.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .songInfo{
+        padding: 1rem 0;
+    }
+
+}
